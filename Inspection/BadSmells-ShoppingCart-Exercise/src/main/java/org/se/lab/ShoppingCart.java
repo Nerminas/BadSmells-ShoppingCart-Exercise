@@ -3,11 +3,11 @@ package org.se.lab;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCart
+class ShoppingCart
 {
 
 	private int id;
-	private List<Article> articles = new ArrayList<Article>();
+	List<Article> articles = new ArrayList<>();
 
 	public ShoppingCart(){
 
@@ -21,26 +21,26 @@ public class ShoppingCart
 
 	public String toString()
 	{
-		String s = "Cart: " + this.id + "\n";
+		StringBuilder s = new StringBuilder("Cart: " + this.id + "\n");
 
 		for(Article article : articles)
 		{
-			s += article.toString();
+			s.append(article.toString());
 		}
 
-		return s;
+		return s.toString();
 	}
 	
 	
 	public String toXml()
 	{
-		String xml = "<shoppingcart id=\"" + id + "\">\n";
+		StringBuilder xml = new StringBuilder("<shoppingcart id=\"" + id + "\">\n");
 		for(Article article : articles)
 		{
-			xml += article.toXml();
+			xml.append(article.toXml());
 		}
 
-		xml += "</shoppingcart>";
-		return xml;
+		xml.append("</shoppingcart>");
+		return xml.toString();
 	}
 }

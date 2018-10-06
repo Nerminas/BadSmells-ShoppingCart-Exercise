@@ -7,7 +7,7 @@ public class Dvd extends Article
 
 	}
 
-	public Dvd(int id, String description, double price)
+	Dvd(int id, String description, double price)
 	{
 		super(id, description, price);
 	}

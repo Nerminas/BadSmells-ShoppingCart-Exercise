@@ -1,8 +1,8 @@
 package org.se.lab;
 
-public abstract class Article
+abstract class Article
 {
-	public Article()
+	Article()
 	{
 	}
 
@@ -10,41 +10,26 @@ public abstract class Article
 	private String description;
 	private double price;
 
-	public Article(int id, String description, double price)
+	Article(int id, String description, double price)
 	{
 		this.id = id;
 		this.description = description;
 		this.price = price;
 	}
 
-	public int getId()
+	int getId()
 	{
 		return id;
 	}
 
-	public void setId(int id)
-	{
-		this.id = id;
-	}
-
-	public String getDescription()
+	String getDescription()
 	{
 		return description;
 	}
 
-	public void setDescription(String description)
-	{
-		this.description = description;
-	}
-
-	public double getPrice()
+	double getPrice()
 	{
 		return price;
-	}
-
-	public void setPrice(double price)
-	{
-		this.price = price;
 	}
 
 	public String toString()

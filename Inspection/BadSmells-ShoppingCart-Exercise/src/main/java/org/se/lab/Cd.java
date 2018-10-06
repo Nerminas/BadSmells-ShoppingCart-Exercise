@@ -7,7 +7,7 @@ public class Cd extends Article
 
 	}
 
-	public Cd(int id, String description, double price)
+	Cd(int id, String description, double price)
 	{
 		super(id, description, price);
 	}

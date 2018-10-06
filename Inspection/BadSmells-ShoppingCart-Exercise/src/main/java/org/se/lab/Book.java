@@ -9,13 +9,13 @@ public class Book extends Article
 
 	}
 
-	public Book(int id, String description, double price, String author)
+	Book(int id, String description, double price, String author)
 	{
 		super(id, description, price);
 		this.author = author;
 	}
 
-	public String getAuthor()
+	private String getAuthor()
 	{
 		return author;
 	}
