@@ -1,31 +1,49 @@
 package org.se.lab;
 
-public class Article
+public abstract class Article
 {
-	enum Type {BOOK, CD, DVD};
-	
-	/*
-	 * Property: id
-	 */
-	public int id;
-	
-	/*
-	 * Property: type
-	 */
-	public Type type;
-	
-	/*
-	 * Property: description
-	 */
-	public String description;
+	protected Article()
+	{
+	}
 
-	/*
-	 * Property: author
-	 */
-	public String author;	// Temporary Field
-	
-	/*
-	 * Property: price
-	 */
-	public double price;
+	private int id;
+	private String description;
+	private double price;
+
+	public Article(int id, String description, double price)
+	{
+		this.id = id;
+		this.description = description;
+		this.price = price;
+	}
+
+	public int getId()
+	{
+		return id;
+	}
+
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+
+	public String getDescription()
+	{
+		return description;
+	}
+
+	public void setDescription(String description)
+	{
+		this.description = description;
+	}
+
+	public double getPrice()
+	{
+		return price;
+	}
+
+	public void setPrice(double price)
+	{
+		this.price = price;
+	}
 }

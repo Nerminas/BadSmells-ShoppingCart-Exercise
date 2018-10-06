@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.se.lab.Article;
+import org.se.lab.Article.Type;
 import org.se.lab.ShoppingCart;
 
 
@@ -16,7 +17,7 @@ public class ShoppingCartTest
 	public void setup()
 	{
 		cart = new ShoppingCart();
-		
+
 		Article cd = new Article();
 		cd.type = Article.Type.CD;
 		cd.id = 1;
@@ -27,7 +28,7 @@ public class ShoppingCartTest
 		Article book = new Article();
 		book.type = Article.Type.BOOK;
 		book.id = 7;
-		book.author = "Martin Fowler";
+		//book.author = "Martin Fowler";
 		book.description = "Refactoring";
 		book.price = 57.80;
 		cart.articles.add(book);

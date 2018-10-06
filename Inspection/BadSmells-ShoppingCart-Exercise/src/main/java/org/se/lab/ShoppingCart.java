@@ -43,7 +43,7 @@ public class ShoppingCart
 	
 	public String toXml()
 	{
-		String xml = "<shoppingcard id=\"" + id + "\">\n";
+		String xml = "<shoppingcart id=\"" + id + "\">\n";
 		for(Iterator it = articles.iterator(); it.hasNext();)
 		{
 			Article a = (Article)it.next();	
@@ -66,7 +66,7 @@ public class ShoppingCart
 				break;
 			}
 		}				
-		xml += "</shoppingcard>";
+		xml += "</shoppingcart>";
 		return xml;
 	}
 }
