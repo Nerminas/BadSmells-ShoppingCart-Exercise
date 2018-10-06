@@ -1,14 +1,13 @@
 package org.se.lab;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class ShoppingCart
 {
 
-	public int id;
-	public List<Article> articles = new ArrayList<Article>();
+	private int id;
+	private List<Article> articles = new ArrayList<Article>();
 
 	public ShoppingCart(){
 
@@ -36,28 +35,11 @@ public class ShoppingCart
 	public String toXml()
 	{
 		String xml = "<shoppingcart id=\"" + id + "\">\n";
-		for(Iterator it = articles.iterator(); it.hasNext();)
+		for(Article article : articles)
 		{
-			Article a = (Article)it.next();	
-			/*switch(a.type)
-			{
-				case BOOK:
-					xml += "\t<book id=\"" + a.id + "\" description=\"" + a.description 
-							+ "\" price=\"" + a.price  
-							+ "\" author=\"" + a.author + "\"/>\n";
-				break;
-				
-				case CD:
-					xml += "\t<cd id=\"" + a.id + "\" description=\"" + a.description 
-						+ "\" price=\"" + a.price + "\"/>\n";
-				break;
-				
-				case DVD:
-					xml += "\t<dvd id=\"" + a.id + "\" description=\"" + a.description 
-					+ "\" price=\"" + a.price + "\"/>\n";
-				break;
-			}*/
-		}				
+			xml += article.toXml();
+		}
+
 		xml += "</shoppingcart>";
 		return xml;
 	}

@@ -51,4 +51,10 @@ public abstract class Article
 	{
 		return getId() + "\t" + getDescription() + "\t" + getPrice() + "\n";
 	}
+
+	public String toXml()
+	{
+		return " id=\"" + getId() + "\" description=\"" + getDescription()
+		+ "\" price=\"" + getPrice() + "\"/>\n";
+	}
 }

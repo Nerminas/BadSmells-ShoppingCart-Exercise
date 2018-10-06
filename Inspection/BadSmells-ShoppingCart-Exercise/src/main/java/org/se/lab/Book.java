@@ -31,4 +31,12 @@ public class Book extends Article
 		return getClass().getSimpleName().toUpperCase() + ":\t" + getId()+ "\t" + getDescription() + "\t" + getAuthor() + "\t" + getPrice() + "\n";
 	}
 
+	@Override
+	public String toXml()
+	{
+		return "\t<" + getClass().getSimpleName().toLowerCase()+" id=\"" + getId() + "\" description=\"" + getDescription()
+			+ "\" price=\"" + getPrice()
+			+ "\" author=\"" + getAuthor() + "\"/>\n";
+	}
+
 }

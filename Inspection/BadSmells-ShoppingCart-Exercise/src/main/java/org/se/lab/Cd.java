@@ -18,5 +18,11 @@ public class Cd extends Article
 		return getClass().getSimpleName().toUpperCase() + ":\t" + super.toString();
 	}
 
+	@Override
+	public String toXml()
+	{
+		return "\t<"+getClass().getSimpleName().toLowerCase() + super.toXml();
+	}
+
 
 }
