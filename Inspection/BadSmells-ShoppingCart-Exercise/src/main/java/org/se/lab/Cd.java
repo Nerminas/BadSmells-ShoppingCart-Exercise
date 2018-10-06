@@ -12,5 +12,11 @@ public class Cd extends Article
 		super(id, description, price);
 	}
 
+	@Override
+	public String toString()
+	{
+		return getClass().getSimpleName().toUpperCase() + ":\t" + super.toString();
+	}
+
 
 }

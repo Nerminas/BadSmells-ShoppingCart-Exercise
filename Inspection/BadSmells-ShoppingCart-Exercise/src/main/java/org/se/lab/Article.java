@@ -2,7 +2,7 @@ package org.se.lab;
 
 public abstract class Article
 {
-	protected Article()
+	public Article()
 	{
 	}
 
@@ -45,5 +45,10 @@ public abstract class Article
 	public void setPrice(double price)
 	{
 		this.price = price;
+	}
+
+	public String toString()
+	{
+		return getId() + "\t" + getDescription() + "\t" + getPrice() + "\n";
 	}
 }

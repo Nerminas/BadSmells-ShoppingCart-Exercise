@@ -24,4 +24,11 @@ public class Book extends Article
 	{
 		this.author = author;
 	}
+
+	@Override
+	public String toString()
+	{
+		return getClass().getSimpleName().toUpperCase() + ":\t" + getId()+ "\t" + getDescription() + "\t" + getAuthor() + "\t" + getPrice() + "\n";
+	}
+
 }
