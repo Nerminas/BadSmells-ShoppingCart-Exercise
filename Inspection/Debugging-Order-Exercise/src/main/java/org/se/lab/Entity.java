@@ -1,34 +1,33 @@
 package org.se.lab;
 
-public abstract class Entity
-{
-	/*
-	 * Property: id:int
-	 */
-	private int id;
-	public int getId()
-	{
-		return id;
-	}
-	public void setId(int id)
-	{
-		if(id < 0)
-			throw new IllegalArgumentException();
-		setId(id);
-	}
+abstract class Entity {
+    /*
+     * Property: id:int
+     */
+    private int id;
 
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Entity other = (Entity) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
+    public int getId() {
+        return id;
+    }
+
+    void setId(int id) {
+        if (id < 0)
+            throw new IllegalArgumentException();
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Entity entity = (Entity) o;
+
+        return id == entity.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
