@@ -31,6 +31,7 @@ public class OrderTest
 		
 		GregorianCalendar date = new GregorianCalendar();
 		date.setTime(order.getDate());
+		System.out.println(order.getDate());
 		Assert.assertEquals(2013, date.get(Calendar.YEAR));
 		Assert.assertEquals(11, date.get(Calendar.MONTH));
 		Assert.assertEquals(2, date.get(Calendar.DAY_OF_MONTH));

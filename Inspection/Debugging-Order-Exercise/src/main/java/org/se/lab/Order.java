@@ -8,33 +8,25 @@ import java.util.List;
 public class Order
 	extends Entity
 {
-	/*
-	 * Constructor
-	 */
+
+	private Date date;
+
 	public Order(int id, Date date)
 	{
 		setId(id);
 		setDate(date);
 	}
-	
-	
-	/*
-	 * Property: date:Date
-	 */
-	private Date date;
+
 	public Date getDate()
 	{
-		return new Date(date.getTime());
+		return this.date;
 	}
 	private void setDate(Date date)
 	{
-		this.date = new Date(date.getTime());
+		this.date = date;
 	}
 	
 	
-	/*
-	 * Association: ---[*]-> OrderLine
-	 */
 	private final List<OrderLine> lines = new ArrayList<>();
 	public void addLine(OrderLine line)
 	{
@@ -48,9 +40,6 @@ public class Order
 	}
 	
 	
-	/*
-	 * Object methods
-	 */
 	@Override
 	public String toString()
 	{

@@ -1,9 +1,7 @@
 package org.se.lab;
 
 abstract class Entity {
-    /*
-     * Property: id:int
-     */
+
     private int id;
 
     public int getId() {
