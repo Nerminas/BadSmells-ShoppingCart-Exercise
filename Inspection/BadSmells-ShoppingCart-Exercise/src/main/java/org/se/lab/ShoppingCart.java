@@ -5,11 +5,11 @@ import java.util.List;
 
 class ShoppingCart
 {
-
-	private int id;
 	List<Article> articles = new ArrayList<>();
+	private int id;
 
-	public ShoppingCart(){
+	public ShoppingCart()
+	{
 
 	}
 
@@ -30,8 +30,7 @@ class ShoppingCart
 
 		return s.toString();
 	}
-	
-	
+
 	public String toXml()
 	{
 		StringBuilder xml = new StringBuilder("<shoppingcart id=\"" + id + "\">\n");
@@ -39,7 +38,6 @@ class ShoppingCart
 		{
 			xml.append(article.toXml());
 		}
-
 		xml.append("</shoppingcart>");
 		return xml.toString();
 	}

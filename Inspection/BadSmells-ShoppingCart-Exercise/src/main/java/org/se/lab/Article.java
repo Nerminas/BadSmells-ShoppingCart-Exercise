@@ -2,10 +2,6 @@ package org.se.lab;
 
 abstract class Article
 {
-	Article()
-	{
-	}
-
 	private int id;
 	private String description;
 	private double price;
@@ -39,7 +35,7 @@ abstract class Article
 
 	public String toXml()
 	{
-		return " id=\"" + getId() + "\" description=\"" + getDescription()
-		+ "\" price=\"" + getPrice() + "\"/>\n";
+		return " id=\"" + getId() + "\" description=\"" + getDescription() + "\" price=\""
+			+ getPrice() + "\"/>\n";
 	}
 }

@@ -2,12 +2,8 @@ package org.se.lab;
 
 public class Cd extends Article
 {
-	public Cd()
-	{
 
-	}
-
-	Cd(int id, String description, double price)
+	public Cd(int id, String description, double price)
 	{
 		super(id, description, price);
 	}
@@ -21,7 +17,7 @@ public class Cd extends Article
 	@Override
 	public String toXml()
 	{
-		return "\t<"+getClass().getSimpleName().toLowerCase() + super.toXml();
+		return "\t<" + getClass().getSimpleName().toLowerCase() + super.toXml();
 	}
 
 

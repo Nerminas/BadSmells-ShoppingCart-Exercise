@@ -1,0 +1,33 @@
+Exercise: BadSmells + Refactoring
+---------------------------------------------------------------------
+Pilot: David Reindl
+Members: Anna Klautzer, Doris Spanner, Michael Klug
+
+#1 ensured tests are working
+- fixed typo in toXml
+
+#2 Dispensable: Removed useless comments
+- in Article.java
+- in ShoppingCart.java
+
+#3 Data Class: Encapsulate Fields
+- set public variables to private and added getters and setters
+- created package-private constructor (according to intelliJ suggestion)
+- refactored ShoppingCard.java
+- refactored setup of ShoppingCartTest.java
+
+#4 Object-Orientation Abusers: Temporary Fields
+- Article.java
+  - removed enum and created classes Book, Dvd and CD
+  - changed Article to abstract class and moved temporary field Author to Book
+- ShoppingCart.java
+  - removed switch-case and added toString/toXml methods to Article classes
+
+#5 changes according to intelliJ suggestions
+- reduced visibility of methods
+- removed unused methods (setters)
+- refactored string buildup to a StringBuilder version
+
+#6 additional changes
+- refactored for loops for a better readability
+			
