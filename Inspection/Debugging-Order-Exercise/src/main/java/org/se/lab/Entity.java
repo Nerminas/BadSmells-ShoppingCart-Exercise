@@ -5,7 +5,7 @@ abstract class Entity
 
 	private int id;
 
-	public int getId()
+	int getId()
 	{
 		return id;
 	}

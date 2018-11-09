@@ -11,13 +11,13 @@ public class Order extends Entity
 	private final List<OrderLine> lines = new ArrayList<>();
 	private Date date;
 
-	public Order(int id, Date date)
+	Order(int id, Date date)
 	{
 		setId(id);
 		setDate(date);
 	}
 
-	public Date getDate()
+	Date getDate()
 	{
 		return this.date;
 	}
@@ -28,7 +28,7 @@ public class Order extends Entity
 	}
 
 
-	public void addLine(OrderLine line)
+	void addLine(OrderLine line)
 	{
 		if(line == null)
 		{
@@ -37,7 +37,7 @@ public class Order extends Entity
 		lines.add(line);
 	}
 
-	public List<OrderLine> getLines()
+	List<OrderLine> getLines()
 	{
 		return lines;
 	}

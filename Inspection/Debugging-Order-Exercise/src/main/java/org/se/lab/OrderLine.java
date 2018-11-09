@@ -6,14 +6,14 @@ public class OrderLine extends Entity
 	private Product product;
 	private int quantity;
 
-	public OrderLine(int id, int quantity, Product product)
+	OrderLine(int id, int quantity, Product product)
 	{
 		setId(id);
 		setQuantity(quantity);
 		setProduct(product);
 	}
 
-	public int getQuantity()
+	int getQuantity()
 	{
 		return quantity;
 	}
@@ -23,7 +23,7 @@ public class OrderLine extends Entity
 		this.quantity = quantity;
 	}
 
-	public Product getProduct()
+	Product getProduct()
 	{
 		return product;
 	}
