@@ -3,24 +3,24 @@ package org.se.lab;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group extends Entity
+class Group extends Entity
 {
 
 	private String name;
-	private List<User> users = new ArrayList<>();
+	private final List<User> users = new ArrayList<>();
 
-	public Group(int id, String name)
+	Group(int id, String name)
 	{
 		setId(id);
 		setName(name);
 	}
 
-	public String getName()
+	String getName()
 	{
 		return name;
 	}
 
-	public void setName(String name)
+	private void setName(String name)
 	{
 		if(name == null)
 		{
@@ -29,7 +29,7 @@ public class Group extends Entity
 		this.name = name;
 	}
 
-	public void addUser(User user)
+	void addUser(User user)
 	{
 		if(user == null)
 		{
@@ -38,7 +38,7 @@ public class Group extends Entity
 		this.users.add(user);
 	}
 
-	public List<User> getUsers()
+	List<User> getUsers()
 	{
 		return users;
 	}

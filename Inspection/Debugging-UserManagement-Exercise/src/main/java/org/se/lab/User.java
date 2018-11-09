@@ -1,20 +1,20 @@
 package org.se.lab;
 
-public class User extends Entity
+class User extends Entity
 {
 
 	private String username;
 	private String password;
 	private Group group;
 
-	public User(int id, String username, String password)
+	User(int id, String username, String password)
 	{
 		setId(id);
 		setUsername(username);
 		setPassword(password);
 	}
 
-	public User(int id, String username, String password, Group group)
+	User(int id, String username, String password, Group group)
 	{
 		setId(id);
 		setUsername(username);
@@ -22,12 +22,12 @@ public class User extends Entity
 		setGroup(group);
 	}
 
-	public String getUsername()
+	String getUsername()
 	{
 		return username;
 	}
 
-	public void setUsername(String username)
+	private void setUsername(String username)
 	{
 		if(username == null)
 		{
@@ -36,12 +36,12 @@ public class User extends Entity
 		this.username = username;
 	}
 
-	public String getPassword()
+	String getPassword()
 	{
 		return password;
 	}
 
-	public void setPassword(String password)
+	private void setPassword(String password)
 	{
 		if(password == null)
 		{
@@ -51,12 +51,12 @@ public class User extends Entity
 	}
 
 
-	public Group getGroup()
+	Group getGroup()
 	{
 		return group;
 	}
 
-	public void setGroup(Group group)
+	void setGroup(Group group)
 	{
 		if(group == null)
 		{

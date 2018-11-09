@@ -1,15 +1,15 @@
 package org.se.lab;
 
-public abstract class Entity
+abstract class Entity
 {
 	private int id;
 
-	public int getId()
+	int getId()
 	{
 		return id;
 	}
 
-	public void setId(int id)
+	void setId(int id)
 	{
 		this.id = id;
 	}
