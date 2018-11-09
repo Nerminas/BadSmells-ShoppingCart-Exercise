@@ -1,38 +1,48 @@
 package org.se.lab;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
-import org.se.lab.User;
 
 public class UserTest
 {
+    private User u;
+    private int id;
+    private String username;
+    private String password;
+
+    @Before
+    public void setup(){
+        id = 3;
+        username = "homer";
+        password = "*****";
+
+        u = new User(id, username, password);
+    }
+
     @Test
     public void testConstructor()
     {
-        User u = new User(3, "homer", "*****");
-        
-        Assert.assertEquals(3, u.getId());
-        Assert.assertEquals("homer", u.getUsername());
-        Assert.assertEquals("*****", u.getPassword());
+        Assert.assertEquals(id, u.getId());
+        Assert.assertEquals(username, u.getUsername());
+        Assert.assertEquals(password, u.getPassword());
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testConstructor_UsernameIsNull()
+    public void testConstructorUsernameIsNull()
     {
-        new User(3, null, "*****");
+        new User(id, null, password);
     }
     
     @Test(expected = IllegalArgumentException.class)
-    public void testConstructor_PasswordIsNull()
+    public void testConstructorPasswordIsNull()
     {
-        new User(3, "homer", null);
+        new User(id, username, null);
     }
     
     @Test
     public void testToString()
     {
-        User u = new User(3, "homer", "*****");
-
         final String EXPECTED = "3,homer,*****";        
         Assert.assertEquals(EXPECTED, u.toString());
     }
