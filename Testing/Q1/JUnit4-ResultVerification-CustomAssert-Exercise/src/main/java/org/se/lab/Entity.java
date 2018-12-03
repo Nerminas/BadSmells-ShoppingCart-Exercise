@@ -1,48 +1,49 @@
 package org.se.lab;
 
+import java.util.Objects;
+
 public abstract class Entity
 {
-	/*
-	 * Property: id:long
-	 */
 	private long id;
+
 	public long getId()
 	{
 		return id;
 	}
-	public void setId(long id)
+
+	void setId(long id)
 	{
 		if(id < 0)
+		{
 			throw new IllegalArgumentException();
+		}
 		this.id = id;
 	}
 
-	
-	/*
-	 * Object methods
-	 */
-	
 	@Override
-	public int hashCode()
+	public boolean equals(Object o)
 	{
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		return result;
+		if(this == o)
+		{
+			return true;
+		}
+		if(o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		Entity entity = (Entity) o;
+		return id == entity.id;
 	}
 
 	@Override
-	public boolean equals(Object obj)
+	public int hashCode()
 	{
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Entity other = (Entity) obj;
-		if (id != other.id)
-			return false;
-		return true;
+		return Objects.hash(id);
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Entity{" + "id=" + getId() + '}';
 	}
 }
