@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface ArticleTable
 {
-    void insert(Article p);
-    void update(Article p);
+    void insert(Article article);
+    void update(Article article);
     void delete(int id);
     
     Article findById(int id);

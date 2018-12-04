@@ -59,7 +59,7 @@ public class Article
 	@Override
     public String toString()
     {
-        return getId() + "," + getDescription() + "," + getPrice();
+        return "id: " + getId() + ", description: " + getDescription() + ", price: " + getPrice();
     }
 
     @Override

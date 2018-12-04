@@ -40,7 +40,8 @@ public class ArticleServiceTestWithSpyAndStub
 		Assert.assertEquals(1, spy.logs.size());
 		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.insert"));
 
-		// TODO: validate parameter data
+		// validate parameter data
+		Assert.assertTrue(spy.logs.get(0).contains("id: 1, description: Effective Java, price: 3495"));
 	}
 	
 	@Test
@@ -63,6 +64,9 @@ public class ArticleServiceTestWithSpyAndStub
 		Assert.assertEquals(1, spy.logs.size());
 		Assert.assertTrue(spy.logs.get(0).contains("ArticleTable.findAll()"));
 
-		// TODO: Verify return data
-	}	
+		//Verify return data
+		Assert.assertTrue(spy.logs.get(0).contains("id: 1, description: Effective Java, price: 3495"));
+		Assert.assertTrue(spy.logs.get(0).contains("id: 2, description: Java Concurrency in Practice, price: 3895"));
+		Assert.assertTrue(spy.logs.get(0).contains("id: 3, description: Clean Code: A Handbook of Agile Software Craftsmanship, price: 3095"));
+	}
 }
